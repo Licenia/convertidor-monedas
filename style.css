@@ -1,0 +1,116 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Quicksand;
+}
+
+.container {
+  width: 100%;
+  background-image: linear-gradient(#051327, #000);
+  position: fixed;
+  inset: 0;
+}
+
+.space {
+  width: var(--size);
+  height: var(--size);
+  background: #fff;
+  box-shadow: var(--space-layer);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 75%;
+  animation: moveStars var(--duration) linear infinite;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(3rem, 10vw, 5rem);
+  color: #b2a7b0;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: #b2a7b0;
+  font-size: clamp(1rem, 8vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.selector-monedas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contenedor-conversion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="number"] {
+  width: 20%;
+  min-width: 150px;
+  padding: 0.7rem;
+  margin-bottom: 0.9rem;
+  border-radius: 0.3rem;
+  border: 1px solid #000;
+}
+
+button {
+  width: 10%;
+  min-width: 120px;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  border: 1px solid #000;
+}
+
+.contenedor-resultado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select {
+  border-radius: 0.8rem;
+  background-color: #3b3139;
+  border: 0;
+  color: #fff;
+  width: clamp(140px, 15%, 300px);
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button {
+  color: #fff;
+  background-color: #3b3139;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+p {
+  color: #b2a7b0;
+  font-size: clamp(16px, 5vw, 24px);
+}
+
+button:hover {
+  box-shadow: 0 0 12px #b2a7b0, 0 0 24px #b2a7b0;
+}
+
+select:hover {
+  box-shadow: 0 0 12px #b2a7b0, 0 0 24px #b2a7b0;
+}
